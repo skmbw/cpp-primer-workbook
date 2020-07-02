@@ -11,5 +11,13 @@ int main()
     std::cout << i - u << std::endl;  // 0
     std::cout << u - i << std::endl;  // 0
 
+    // 对于无符号的数，赋值一个超出范围的数，那么是取模后的值
+    unsigned char cc = -1;
+    std::cout << int(cc) << std::endl;
+
+    // 对于有符号的数，赋值一个超出范围的数，那么是未定义的
+    signed char cc2 = 256;
+    std::cout << cc2 << std::endl;
+
     return 0;
 }
