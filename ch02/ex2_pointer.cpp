@@ -26,11 +26,18 @@ int main() {
     double *nullPointer2 = NULL;
     double *nullPointer3 = 0;
 
+    // 赋值永远改变的是等号左侧的对象的值，这样就容易区分改变的是指针的值，还是指针指向对象的值
+
     // intPointer是一个指针，要使用它所指向的值，必须使用解引用符（*）来获得它所指向的对象
     // intPointer = 2;
-    *intPointer = 2;
+    *intPointer = 2; // 实际上为intPointer指向的对象i赋值
 
     cout << i << " " << *intPointer << endl;
+
+    // 指向指针的指针
+    int **intPPointer = &intPointer;
+    // 解引用两次才能获得最后的值
+    cout << **intPPointer << " " << endl;
 
     return 0;
 }
