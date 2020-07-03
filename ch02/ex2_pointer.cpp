@@ -32,6 +32,9 @@ int main() {
     // intPointer = 2;
     *intPointer = 2; // 实际上为intPointer指向的对象i赋值
 
+    // 指针的引用，intPointer是一个int*指针，引用intPointerRef是intPointer的别名
+    int* &intPointerRef = intPointer;
+
     cout << i << " " << *intPointer << endl;
 
     // 指向指针的指针
